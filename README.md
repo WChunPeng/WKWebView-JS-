@@ -20,8 +20,8 @@ WKWebView 与JS交互  Demo
 5.webView 执行JS代码
 6.JS调用App注册过的方法
 
-####用法概述：
-######1.加载网页：
+用法概述：
+1.加载网页：
 加载网页或HTML代码的方式与UIWebView相同，代码示例如下：
 ```
 WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
@@ -29,7 +29,7 @@ WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
 [self.view addSubview:webView];
 ```
 
-######2.加载的状态回调即代理（WKNavigationDelegate）方法实现
+2.加载的状态回调即代理（WKNavigationDelegate）方法实现
 用来追踪加载过程（页面开始加载、加载完成、加载失败）的方法：
 ```
 // 页面开始加载时调用
@@ -50,7 +50,7 @@ WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
 // 在发送请求之前，决定是否跳转
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler;
 ```
-######3.新的WKUIDelegate协议
+3.新的WKUIDelegate协议
 与JS的alert、confirm、prompt交互，我们希望用自己的原生界面，而不是JS的，就可以使用这个代理类来实现。
 1. alert警告框函数：
 ```
@@ -94,7 +94,7 @@ WKWebView *webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
     [self presentViewController:alert animated:YES completion:NULL];
 }
 ```
-######4.动态加载并运行JS代码
+4.动态加载并运行JS代码
 用于在客户端内部加入JS代码，并执行，示例如下：
 ```
 // 图片缩放的js代码
@@ -108,12 +108,12 @@ _webView = [[WKWebView alloc] initWithFrame:self.view.bounds configuration:confi
 [_webView loadHTMLString:@"<head></head><imgea src='http://www.nsu.edu.cn/v/2014v3/img/background/3.jpg' />"baseURL:nil];
 [self.view addSubview:_webView];
 ```
-######5. webView 执行JS代码:
+5. webView 执行JS代码:
 用户调用用JS写过的代码，一般指服务端开发的：
 ```
 //javaScriptString是JS方法名，completionHandler是异步回调block
 [self.webView evaluateJavaScript:javaScriptString completionHandler:completionHandler];
 ```
 
-###最后Demo地址：
+最后Demo地址：
 [WKWebViewdemo](https://github.com/WChunPeng/WKWebView-JS-)  
