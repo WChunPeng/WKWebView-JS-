@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2XC-Oj-zqt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="bDA-fb-EFo">
+            <objects>
+                <navigationController id="2XC-Oj-zqt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Y2i-x4-ExK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="JKm-H9-3nS" kind="relationship" relationship="rootViewController" id="8tB-9g-Ic9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amO-W8-pZP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1266" y="221"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="8ed-eO-7YZ">
+            <objects>
+                <viewController id="JKm-H9-3nS" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="t6R-Up-5kz"/>
+                        <viewControllerLayoutGuide type="bottom" id="wWP-Oe-HhN"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="A4D-JQ-h8x">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1J8-8w-9Mk">
+                                <rect key="frame" x="0.0" y="607" width="375" height="60"/>
+                                <color key="backgroundColor" red="1" green="0.90119392289020783" blue="0.1803546489978175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="lSP-GN-XAc"/>
+                                </constraints>
+                                <state key="normal" title="原声button 跳到下个界面"/>
+                                <connections>
+                                    <action selector="pushTo:" destination="JKm-H9-3nS" eventType="touchUpInside" id="fQ9-Yt-McZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="1J8-8w-9Mk" firstAttribute="leading" secondItem="A4D-JQ-h8x" secondAttribute="leading" id="IKS-PK-zOU"/>
+                            <constraint firstAttribute="trailing" secondItem="1J8-8w-9Mk" secondAttribute="trailing" id="Pfl-WD-YO1"/>
+                            <constraint firstAttribute="bottom" secondItem="1J8-8w-9Mk" secondAttribute="bottom" id="juP-YX-aHK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="enZ-gS-vPZ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SdJ-2f-UJB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-357" y="121"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="6v9-71-44Z">
+            <objects>
+                <viewController storyboardIdentifier="SecondViewController" id="9Dr-sQ-xhq" customClass="SecondViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BZx-lP-8Mz"/>
+                        <viewControllerLayoutGuide type="bottom" id="nY8-5g-CGe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Vdn-KI-tqI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vCI-PK-UAH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="329" y="121"/>
+        </scene>
+    </scenes>
+</document>
